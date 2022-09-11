@@ -40,7 +40,7 @@ a {
   transition: all 0.4s ease;
 }
 a:hover {
-  color: #ffc200 !important;
+  color: teal !important;
 }
 
 .navbar-brand .uil {
@@ -92,14 +92,14 @@ b, strong {
   transition: all 0.4s ease;
 }
 .custom-btn:hover {
-  color: #ffc200;
+  color: teal;
 }
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
 }
 .custom-btn.custom-btn-bg:hover {
-  background: #ffc200;
+  background: teal;
   color: #ffffff !important;
 }
 
@@ -108,6 +108,7 @@ b, strong {
 }
 
 .animated-info {
+  width: 100%;
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
@@ -116,11 +117,38 @@ b, strong {
 }
 
 .animated-item {
-  color: #ffc200;
+  color: teal;
 }
 
+.gold-color {
+  color: #5b5b5b;
+}
+
+.dark-mode .gold-color {
+  color: teal;
+}
+
+.about-icon a{
+  color: #0c0c0d;
+  list-style: none;
+} 
+.dark-mode .about-icon a {
+  color: #ffffff;
+}
+.about-icon .social-links {
+  padding: 2%;
+  display: flex;
+  gap: 3%;
+}
+
+.skill-image {
+  width: 40%;
+  margin: auto;
+}
+
+
 .animated-item {
-  font-size: 38px;
+  font-size: 35px;
   line-height: inherit;
   display: block;
   opacity: 0;
@@ -171,9 +199,7 @@ b, strong {
   right: 0;
   left: 0;
   z-index: 999999;
-  border: 2px solid;
   will-change: transform;
-  border: 2px solid;
   transition: transform 200ms linear;
 }
 .navbar[class*="-unpinned"] {
@@ -216,7 +242,7 @@ b, strong {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: teal;
   font-weight: bold;
 }
 .navbar-light .navbar-nav .nav-link:focus span,
@@ -291,6 +317,16 @@ b, strong {
   color: #ffffff;
 }
 
+.color-icon-mobile:after {
+  font-size: 18px;
+}
+.color-icon-mobile.active:after {
+  font-size: 18px;
+}
+.hide-icon-mobile {
+  display: none;
+}
+
 .dark-mode {
   background: #0c0c0d;
 }
@@ -298,7 +334,7 @@ b, strong {
   color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: teal;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #0c0c0d;
@@ -400,7 +436,7 @@ b, strong {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffc200;
+  color: teal;
 }
 .owl-theme .owl-dots .owl-dot {
   outline: none;
@@ -432,10 +468,10 @@ b, strong {
   height: 48px;
 }
 .contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
+  border-color: teal;
 }
 .contact-form .submit-btn {
-  background: #ffc200;
+  background: teal;
   border-radius: 50px;
   color: #ffffff;
   font-weight: bold;
@@ -453,6 +489,7 @@ b, strong {
   position: relative;
   bottom: 8px;
 }
+
 .contact-info p, .contact-info a {
   color: #f7f3f3;
 }
@@ -464,8 +501,83 @@ b, strong {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #ffc200;
+  color: teal;
 }
+
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+
+.services .icon-box {
+  width: 100%;
+  text-align: center;
+  padding: 70px 20px 80px 20px;
+  transition: all ease-in-out 0.3s;
+  background: #fff;
+  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+}
+.dark-mode .services .icon-box {
+  background: #0c0c0d;
+  
+}
+
+.dark-mode .services .icon-box h4 > a{
+  color: #ffffff;
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  position: relative;
+}
+
+.services .icon-box .icon i {
+  font-size: 36px;
+  transition: 0.5s;
+  position: relative;
+}
+
+.services .icon-box .icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.services .icon-box .icon svg path {
+  transition: 0.5s;
+  fill: #f5f5f5;
+}
+
+.services .icon-box h4 {
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services .icon-box h4 a {
+  color: #45505b;
+  transition: ease-in-out 0.3s;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  border-color: #fff;
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+}
+
+
+
 
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
@@ -517,6 +629,14 @@ b, strong {
   .navbar-expand-sm .navbar-nav .nav-link {
     padding: 3px 20px;
   }
+
+  .dark-mode .navbar-collapse {
+    background: #0c0c0d;
+  }
+  .dark-mode .navbar-toggler-icon {
+    background: #ffffff;
+  }
+
 }
 @media (max-width: 580px) {
 	.animated-info {
@@ -543,6 +663,22 @@ b, strong {
     display: block;
     margin: 10px 0 0 0;
   }
+
+  .about-icon .social-links {
+    justify-content: space-evenly;
+  }
+
+  .hide-icon-mobile {
+    display: block;
+  }
+
+  .dark-mode .navbar-collapse {
+    background: #0c0c0d;
+  }
+  .dark-mode .navbar-toggler-icon {
+    background: #ffffff;
+  }
+
 }
 @media (max-width: 320px) {
   .animated-text {
@@ -569,4 +705,20 @@ b, strong {
     display: inline-block;
     vertical-align: top;
   }
+
+  .about-icon .social-links {
+    justify-content: space-evenly;
+  }
+
+  .hide-icon-mobile {
+    display: block;
+  }
+
+  .dark-mode .navbar-collapse {
+    background: #0c0c0d;
+  }
+  .dark-mode .navbar-toggler-icon {
+    background: #ffffff;
+  }
+
 }
